@@ -7,12 +7,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        string sourceDirectory = @"..\Solution Items";
-        string targetDirectory = @"..\Solution Items\Output";
+        string sourceDirectory = @"E:\source\repos\ca.whitaker.Graphics\ca.whitaker.Graphics.BulkImageResize";
+        string targetDirectory = @"E:\source\repos\ca.whitaker.Graphics\ca.whitaker.Graphics.BulkImageResize\Output";
 
         ResizeImages(sourceDirectory, targetDirectory, 12);
         ResizeImages(sourceDirectory, targetDirectory, 24);
         ResizeImages(sourceDirectory, targetDirectory, 36);
+        ResizeImages(sourceDirectory, targetDirectory, 48);
     }
 
     static void ResizeImages(string sourceDir, string targetDir, int size)
