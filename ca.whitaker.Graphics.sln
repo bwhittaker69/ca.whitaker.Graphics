@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34310.174
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ca.whitaker.Graphics.BulkImageResize", "ca.whitaker.Graphics.BulkImageResize\ca.whitaker.Graphics.BulkImageResize.csproj", "{045A3AEE-8729-4B75-8D03-8D4786E85224}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ca.whitaker.Graphics.BulkImageResize", "ca.whitaker.Graphics.BulkImageResize\ca.whitaker.Graphics.BulkImageResize.csproj", "{045A3AEE-8729-4B75-8D03-8D4786E85224}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0BF6811-3688-421D-BCF3-431B8D1BA663}"
 	ProjectSection(SolutionItems) = preProject
@@ -977,6 +977,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution Items\layout_southwest.png = Solution Items\layout_southwest.png
 		Solution Items\layout_vertical.png = Solution Items\layout_vertical.png
 		Solution Items\layout_west.png = Solution Items\layout_west.png
+		LICENSE.txt = LICENSE.txt
 		Solution Items\lifebelt.png = Solution Items\lifebelt.png
 		Solution Items\lightbulb.png = Solution Items\lightbulb.png
 		Solution Items\lightbulb_on.png = Solution Items\lightbulb_on.png
@@ -1250,6 +1251,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution Items\product2.png = Solution Items\product2.png
 		Solution Items\question_and_answer.png = Solution Items\question_and_answer.png
 		Solution Items\radio.png = Solution Items\radio.png
+		README.md = README.md
 		Solution Items\record.png = Solution Items\record.png
 		Solution Items\recycle.png = Solution Items\recycle.png
 		Solution Items\recycle_preferences.png = Solution Items\recycle_preferences.png
