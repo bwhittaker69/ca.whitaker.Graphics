@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 
 class Program
 {
@@ -10,39 +11,45 @@ class Program
         Console.WriteLine("Enter source file or directory path:");
         string sourcePath = Console.ReadLine();
 
-        // Prompt for target directory
         Console.WriteLine("Enter target directory path:");
         string targetDirectory = Console.ReadLine();
 
-        // Check if target directory exists, create if not
         if (!Directory.Exists(targetDirectory))
         {
             Console.WriteLine("Target directory does not exist. Creating it now...");
             Directory.CreateDirectory(targetDirectory);
         }
 
-        // Prompt for resize size
-        Console.WriteLine("Enter the size for resizing (e.g., 12, 24, 36, 48):");
-        if (!int.TryParse(Console.ReadLine(), out int size))
+        Console.WriteLine("Enter the size(s) for resizing (single or comma-separated, e.g., 12, 24, 36, 48):");
+        string sizeInput = Console.ReadLine();
+        var sizes = sizeInput.Split(',')
+                             .Select(s => s.Trim())
+                             .Where(s => int.TryParse(s, out _))
+                             .Select(s => int.Parse(s))
+                             .ToList();
+
+        if (sizes.Count == 0)
         {
-            Console.WriteLine("Invalid size. Please enter a valid number.");
+            Console.WriteLine("Invalid size(s). Please enter a valid number or comma-separated list of numbers.");
             return;
         }
 
-        // Prompt for grayscale option
         Console.WriteLine("Apply grayscale? (yes/no)");
         bool grayscale = Console.ReadLine().Trim().ToLower() == "yes";
 
-        // Determine if the source path is a file or a directory
         if (File.Exists(sourcePath))
         {
-            // It's a file, process single file
-            ProcessFile(sourcePath, targetDirectory, size, grayscale);
+            foreach (var size in sizes)
+            {
+                ProcessFile(sourcePath, targetDirectory, size, grayscale);
+            }
         }
         else if (Directory.Exists(sourcePath))
         {
-            // It's a directory, process all files in directory
-            ProcessDirectory(sourcePath, targetDirectory, size, grayscale);
+            foreach (var size in sizes)
+            {
+                ProcessDirectory(sourcePath, targetDirectory, size, grayscale);
+            }
         }
         else
         {
