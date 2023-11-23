@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution Items\google.png = Solution Items\google.png
 		Solution Items\linkedin.png = Solution Items\linkedin.png
 		Solution Items\microsoft.png = Solution Items\microsoft.png
+		Solution Items\signout.png = Solution Items\signout.png
 	EndProjectSection
 EndProject
 Global
